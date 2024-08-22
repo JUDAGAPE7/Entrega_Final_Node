@@ -17,4 +17,4 @@ const user ={
 
 
 
-module.exports =userCreate
+module.exports = userCreate
