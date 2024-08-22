@@ -11,12 +11,6 @@ const create = catchError(async(req, res) => {
     return res.status(201).json(result);
 });
 
-const getOne = catchError(async(req, res) => {
-    const { id } = req.params;
-    const result = await User.findByPk(id);
-    if(!result) return res.sendStatus(404);
-    return res.json(result);
-});
 
 const remove = catchError(async(req, res) => {
     const { id } = req.params;
