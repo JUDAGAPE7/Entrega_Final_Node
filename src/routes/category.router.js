@@ -1,4 +1,4 @@
-const { getAll, create, getOne, remove, update } = require('../controllers/category.controllers');
+const { getAll, create,  remove,  } = require('../controllers/category.controllers');
 const express = require('express');
 const { verifyJWT } = require('../utils/verifyJWT');
 
@@ -9,8 +9,8 @@ routerCategory.route('/')
     .post(verifyJWT,create);
 
 routerCategory.route('/:id')
-    .get(getOne)
+    
     .delete(verifyJWT,remove)
-    .put(update);
+    
 
 module.exports = routerCategory;
