@@ -9,7 +9,6 @@ routerCategory.route('/')
     .post(verifyJWT,create);
 
 routerCategory.route('/:id')
-    
     .delete(verifyJWT,remove)
     
 
