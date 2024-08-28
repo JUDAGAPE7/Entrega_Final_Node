@@ -4,25 +4,23 @@ const Product = require("./Product");
 const Purchase = require("./Purchase");
 const User = require("./User");
 
+// Product --> categoryId
+Product.belongsTo(Category)
+Category.hasMany(Product)
 
-    // Product --> categoryId
-    Product.belongsTo(Category)
-    Category.hasMany(Product)
+//Cart -> userId
+Cart.belongsTo(User)
+User.hasMany(Cart)
 
-
-   // Cart -> USerId
-    Cart.belongsTo(User)
-    User.hasMany(Cart)
-
-
-     //Cart -> ProductId
-
-     Cart.belongsTo(Product)
-     Product.hasMany(Cart)
+//Cart -> productId
+Cart.belongsTo(Product)
+Product.hasMany(Cart)
 
 
-     Purchase.belongsTo(User)
-     User.hasMany(Purchase)
+//Cart -> userId
+Purchase.belongsTo(User)
+User.hasMany(Purchase)
 
-     Purchase.belongsTo(Product)
-     Product.hasMany(Purchase)
+//Cart -> productId
+Purchase.belongsTo(Product)
+Product.hasMany(Purchase)

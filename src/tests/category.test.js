@@ -27,7 +27,7 @@ test("POST --> BASE_URL, should return statusCode 201, and res.body.name === cat
         .post(BASE_URL)
         .send(category)
         .set('Authorization', `Bearer ${TOKEN}`)
-        // console.log(res.body)
+       
         categoryId = res.body.id;
         expect(res.statusCode).toBe(201)
         expect(res.body).toBeDefined()
