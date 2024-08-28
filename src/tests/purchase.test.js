@@ -69,7 +69,7 @@ test("POST -> 'BASE_URL', should return statusCode 201 and res.body.quantity ===
       .post(BASE_URL)
       .set('Authorization', `Bearer ${TOKEN}`)
 
-    console.log('POST Response:', res.body);
+   
     
     purchaseId = res.body.id
 
@@ -88,7 +88,7 @@ test("GET -> 'BASE_URL', should return statusCode 200 and res.body.quantity === 
       .get(BASE_URL)
       .set('Authorization', `Bearer ${TOKEN}`)
 
-    console.log('GET Response:', res.body);
+    
 
     expect(res.statusCode).toBe(200)
     expect(res.body).toBeDefined()
